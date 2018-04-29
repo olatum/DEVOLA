@@ -1,0 +1,72 @@
+// Styling for the masthead
+header.hero {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  color: white;
+  background-image: url('../img/bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+
+  @include background-cover;
+  .intro-text {
+    box-sizing: border-box;
+    padding-top: 100px;
+    padding-bottom: 10px;
+
+    .intro-lead-in {
+      font-size: 22px;
+      font-style: italic;
+      line-height: 22px;
+      margin-bottom: 25px;
+      background: rgba(62, 80, 98, 0.3);
+      @include serif-font;
+    }
+    .intro-heading {
+      animation-delay: 1s;
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 50px;
+      margin-bottom: 25px;
+      background: rgba(62, 80, 98, 0.3);
+      @include heading-font;
+    }
+  }
+}
+.footer{
+    display: none;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 600px){
+  header.hero {
+     height: 150vh;
+ }
+ }
+@media(min-width:769px) {
+  header.hero {
+      height: 100vh;
+      width: 100vw;
+    .intro-text {
+      padding-top: 300px;
+      padding-bottom: 200px;
+      .intro-lead-in {
+        font-size: 40px;
+        font-style: italic;
+        line-height: 40px;
+        margin-bottom: 25px;
+        @include serif-font;
+      }
+      .intro-heading {
+        font-size: 75px;
+        font-weight: 700;
+        line-height: 75px;
+        margin-bottom: 5px;
+        @include heading-font;
+      }
+    }
+  }
+  .footer{
+      display: inline;
+  }
+}

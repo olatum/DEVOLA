@@ -1,0 +1,83 @@
+// Styling for the contact section
+section#contact {
+  // background-color: rgba(62, 80, 98, 0.3);
+
+
+  // background-image: url('../img/map-image.png');
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // .section-heading {
+  //   color: $white;
+  // }
+  // Styling for the contact section
+  .floating-label-form-group {
+    position: relative;
+    border-bottom: 1px solid $gray-200;
+    input,
+    textarea {
+      font-size: 1.5em;
+      position: relative;
+      z-index: 1;
+      padding-right: 0;
+      padding-left: 0;
+      resize: none;
+      border: none;
+      border-radius: 0;
+      background: none;
+      box-shadow: none !important;
+    }
+    label {
+      font-size: 0.85em;
+      line-height: 1.764705882em;
+      position: relative;
+      z-index: 0;
+      top: 2em;
+      display: block;
+      margin: 0;
+      -webkit-transition: top 0.3s ease, opacity 0.3s ease;
+      -moz-transition: top 0.3s ease, opacity 0.3s ease;
+      -ms-transition: top 0.3s ease, opacity 0.3s ease;
+      transition: top 0.3s ease, opacity 0.3s ease;
+      vertical-align: middle;
+      vertical-align: baseline;
+      opacity: 0;
+    }
+    &:not(:first-child) {
+      padding-left: 14px;
+      border-left: 1px solid $gray-200;
+    }
+  }
+
+  .floating-label-form-group-with-value {
+    label {
+      top: 0;
+      opacity: 1;
+    }
+  }
+
+  .floating-label-form-group-with-focus {
+    label {
+      color: $primary;
+    }
+  }
+  form .row:first-child .floating-label-form-group {
+    border-top: 1px solid $gray-200;
+  }
+  }
+
+
+  @media(min-width:600px) {
+      .form-group{
+          margin-left:100px!important;
+      }
+  }
+
+  .icon{
+       max-width: 50px;
+       max-height: 50px;
+   }
+
+   .icon1{
+        max-width: 30px;
+        max-height: 30px;
+    }

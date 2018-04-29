@@ -1,0 +1,109 @@
+// Styling for the navbar
+#mainNav {
+  background-color: #3e5062;
+  .navbar-toggler {
+    font-size: 12px;
+    right: 0;
+    padding: 13px;
+    text-transform: uppercase;
+    color: white;
+    border: 0;
+    background-color: #3e5062;
+    @include heading-font;
+  }
+  .navbar-brand {
+    color: #ee1fa0;
+    @include script-font;
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      color: darken(#ee1fa0, 10%);
+    }
+  }
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        font-size: 90%;
+        font-weight: 400;
+        padding: 0.75em 0;
+        letter-spacing: 1px;
+        color: white;
+        @include heading-font;
+        &.active,
+        &:hover {
+          color: #ee1fa0;
+        }
+      }
+    }
+  }
+}
+
+
+@media(min-width:992px) {
+  #mainNav {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    border: none;
+    background-color: transparent;
+    .navbar-brand {
+      font-size: 1.75em;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          padding: 1.1em 1em !important;
+        }
+      }
+    }
+    &.navbar-shrink {
+      padding-top: 0;
+      padding-bottom: 0;
+      background-color: #3e5062;
+      .navbar-brand {
+        font-size: 1.25em;
+        padding: 12px 0;
+      }
+    }
+  }
+}
+
+.navbar-toggler-right{
+    color:#ee1fa0!important;
+}
+
+.item {
+  position: relative!important;
+}
+.item::after,
+.item::before {
+  content:''!important;
+  position: absolute!important;
+  transition: 1s!important;
+  width: 0%!important;
+  height: 3px!important;
+  bottom: 0!important;
+
+}
+.item::before {
+  left: 0!important;
+  background-color: #ee1fa0!important;
+}
+.item::after {
+  right: 0!important;
+  background-color: #fff!important;
+}
+.item:hover::after  {
+  transform: translate(-100%)!important;
+  width: 50%!important;
+}
+.item:hover::before  {
+  transform: translate(100%)!important;
+  width: 50%!important;
+}

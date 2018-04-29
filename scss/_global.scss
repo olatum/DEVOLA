@@ -1,0 +1,113 @@
+// Global styling for this template
+body {
+  overflow-x: hidden;
+  @include body-font;
+}
+
+p {
+  line-height: 1.75;
+}
+
+a {
+  color:  #ee1fa0;
+  &:hover {
+    color: darken( #ee1fa0, 10%);
+  }
+}
+
+.text-primary {
+  color:  #ee1fa0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  @include heading-font;
+}
+
+section {
+  padding: 100px 0;
+  h2.section-heading {
+    font-size: 35px;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  h3.section-subheading {
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 75px;
+    text-transform: none;
+    @include serif-font;
+  }
+}
+@media(min-width:768px) {
+  section {
+    padding: 120px 0;
+  }
+}
+
+// Button Styles
+.btn {
+  @include heading-font;
+  font-weight: 700;
+}
+
+.btn-xl {
+  font-size: 18px;
+  padding: 20px 40px;
+}
+
+.btn-primary {
+  background-color: #ee1fa0!important;
+  border-color: #ee1fa0!important;
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: darken(#ee1fa0, 10%) !important;
+    border-color: darken(#ee1fa0, 15%) !important;
+    color: white;
+  }
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 0.1rem rgba(238, 31, 150,.5) !important;
+  }
+}
+
+// Highlight color customization
+::-moz-selection {
+  background:  #ee1fa0;
+  text-shadow: none;
+}
+
+
+::selection {
+  background:  #ee1fa0;
+  text-shadow: none;
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+
+.logo {
+    max-width:100px;
+    height:auto;
+}
+
+.footer{
+    color:#ee1fa0;
+    position: fixed;
+    bottom: 10px;
+    right:10px;
+    font-weight: bolder;
+}
